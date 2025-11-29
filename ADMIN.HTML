@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Book Management App — Admin</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+<div class="container nav">
+<h2>Book Management</h2>
+<div>
+<button class="btn" onclick="location.href='index.html'">Home</button>
+</div>
+</div>
+</header>
+
+
+<main class="container">
+<section class="form-section">
+<form id="addBookForm" class="card form-card">
+<h3>Add Book</h3>
+
+
+<label>Title
+<input id="title" required type="text" placeholder="Enter title" />
+</label>
+
+
+<label>Author
+<input id="author" required type="text" placeholder="Enter author" />
+</label>
+
+
+<label>Category
+<select id="category" required>
+<option value="Fiction">Fiction</option>
+<option value="Comedy">Comedy</option>
+<option value="Technical">Technical</option>
+</select>
+</label>
+
+
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">Add Book</button>
+<button type="button" id="clearAll" class="btn btn-danger">Clear All</button>
+</div>
+</form>
+
+
+<aside class="controls card">
+<h4>Controls</h4>
+<div class="control-row">
+<label>Sort:
+<button id="sortBtn" class="btn">Sort by Title A → Z</button>
+</label>
+</div>
+
+
+<div class="control-row">
+<label>Filter by Category
+<select id="filterSelect">
+<option value="All">All</option>
+<option value="Fiction">Fiction</option>
+<option value="Comedy">Comedy</option>
+<option value="Technical">Technical</option>
+</select>
+</label>
+</div>
+</aside>
+</section>
+
+
+<section>
+<h3 class="section-title">Books</h3>
+<div id="booksGrid" class="grid"></div>
+</section>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
